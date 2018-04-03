@@ -24,6 +24,13 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
+### `npm test`
+
+Npm test will run `react-scripts test` which is currently broken a the `environment.setup()` as enzyme now needs an adapter to run effectively with setup().  This can be overwritten by ejecting or by running `npm install jest jest-cli --save-dev`.  
+
+Once you install jest and jest-cli you then will need  `enzyme react-test-renderer enzyme-adapter-react-16 enzyme-react-16-adapter-setup` this will allow you to attach a adapter in your tests either manually or in setupFiles in your `package.json`.
+
+
 ### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**

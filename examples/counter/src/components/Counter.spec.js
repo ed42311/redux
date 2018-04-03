@@ -1,6 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import Counter from './Counter'
+import Adapter from 'enzyme-adapter-react-16'
+
+configure({
+  adapter: new Adapter()
+})
 
 function setup(value = 0) {
   const actions = {
